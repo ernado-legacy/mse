@@ -24,6 +24,8 @@ const (
 	CHUNKS = 15
 )
 
+// https://github.com/go-av/rtmp
+
 // ffmpeg -i test.webm -f webm -vcodec vp8 -g 10 t.webm
 var command = fmt.Sprintf("ffmpeg -i - -c:v libvpx -b:v %dk -c:a libvorbis -f webm -threads %d -g 1 -", 500, 4)
 
